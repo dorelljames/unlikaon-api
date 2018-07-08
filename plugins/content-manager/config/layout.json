@@ -1,0 +1,38 @@
+{
+  "business": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": "WYSIWYG"
+      },
+      "address": {
+        "appearance": ""
+      }
+    }
+  },
+  "food": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": "WYSIWYG"
+      },
+      "price": {
+        "appearance": ""
+      }
+    }
+  },
+  "foodCategory": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": "WYSIWYG"
+      }
+    }
+  }
+}

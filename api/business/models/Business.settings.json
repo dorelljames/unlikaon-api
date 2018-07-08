@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "business",
+  "info": {
+    "name": "business",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "categories": {
+      "collection": "foodcategory",
+      "via": "businesses",
+      "dominant": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}
