@@ -9,6 +9,9 @@
       },
       "address": {
         "appearance": ""
+      },
+      "contactNumber": {
+        "appearance": ""
       }
     }
   },
@@ -32,6 +35,16 @@
       },
       "description": {
         "appearance": "WYSIWYG"
+      }
+    }
+  },
+  "socialLink": {
+    "attributes": {
+      "url": {
+        "appearance": ""
+      },
+      "type": {
+        "appearance": ""
       }
     }
   }

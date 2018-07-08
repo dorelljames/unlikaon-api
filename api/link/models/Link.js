@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Foodcategory` model.
+ * Lifecycle callbacks for the `Link` model.
  */
 
 module.exports = {

@@ -2,8 +2,8 @@
   "connection": "default",
   "collectionName": "foodcategory",
   "info": {
-    "name": "foodcategory",
-    "description": "Food categories. e.g. shrimps, burgers, etc."
+    "name": "category",
+    "description": "Categories like shrimps, burgers, etc."
   },
   "options": {
     "timestamps": true
@@ -17,6 +17,7 @@
       "type": "text"
     },
     "businesses": {
+      "columnName": "",
       "collection": "business",
       "via": "categories"
     }

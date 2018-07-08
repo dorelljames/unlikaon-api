@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Foodcategory.js service
+ * Category.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -12,21 +12,21 @@ const _ = require('lodash');
 module.exports = {
 
   /**
-   * Promise to fetch all foodcategories.
+   * Promise to fetch all categories.
    *
    * @return {Promise}
    */
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('foodcategory', params);
+    const filters = strapi.utils.models.convertParams('category', params);
     // Select field to populate.
-    const populate = Foodcategory.associations
+    const populate = Category.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Foodcategory
+    return Category
       .find()
       .where(filters.where)
       .sort(filters.sort)
@@ -36,90 +36,90 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch a/an foodcategory.
+   * Promise to fetch a/an category.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Foodcategory.associations
+    const populate = Category.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Foodcategory
-      .findOne(_.pick(params, _.keys(Foodcategory.schema.paths)))
+    return Category
+      .findOne(_.pick(params, _.keys(Category.schema.paths)))
       .populate(populate);
   },
 
   /**
-   * Promise to count foodcategories.
+   * Promise to count categories.
    *
    * @return {Promise}
    */
 
   count: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('foodcategory', params);
+    const filters = strapi.utils.models.convertParams('category', params);
 
-    return Foodcategory
+    return Category
       .count()
       .where(filters.where);
   },
 
   /**
-   * Promise to add a/an foodcategory.
+   * Promise to add a/an category.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Foodcategory.associations.map(ast => ast.alias));
-    const data = _.omit(values, Foodcategory.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Category.associations.map(ast => ast.alias));
+    const data = _.omit(values, Category.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Foodcategory.create(data);
+    const entry = await Category.create(data);
 
     // Create relational data and return the entry.
-    return Foodcategory.updateRelations({ id: entry.id, values: relations });
+    return Category.updateRelations({ id: entry.id, values: relations });
   },
 
   /**
-   * Promise to edit a/an foodcategory.
+   * Promise to edit a/an category.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Foodcategory.associations.map(a => a.alias));
-    const data = _.omit(values, Foodcategory.associations.map(a => a.alias));
+    const relations = _.pick(values, Category.associations.map(a => a.alias));
+    const data = _.omit(values, Category.associations.map(a => a.alias));
 
     // Update entry with no-relational data.
-    const entry = await Foodcategory.update(params, data, { multi: true });
+    const entry = await Category.update(params, data, { multi: true });
 
     // Update relational data and return the entry.
-    return Foodcategory.updateRelations(Object.assign(params, { values: relations }));
+    return Category.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an foodcategory.
+   * Promise to remove a/an category.
    *
    * @return {Promise}
    */
 
   remove: async params => {
     // Select field to populate.
-    const populate = Foodcategory.associations
+    const populate = Category.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
     // Note: To get the full response of Mongo, use the `remove()` method
     // or add spent the parameter `{ passRawResult: true }` as second argument.
-    const data = await Foodcategory
+    const data = await Category
       .findOneAndRemove(params, {})
       .populate(populate);
 
@@ -128,7 +128,7 @@ module.exports = {
     }
 
     await Promise.all(
-      Foodcategory.associations.map(async association => {
+      Category.associations.map(async association => {
         const search = _.endsWith(association.nature, 'One') || association.nature === 'oneToMany' ? { [association.via]: data._id } : { [association.via]: { $in: [data._id] } };
         const update = _.endsWith(association.nature, 'One') || association.nature === 'oneToMany' ? { [association.via]: null } : { $pull: { [association.via]: data._id } };
 

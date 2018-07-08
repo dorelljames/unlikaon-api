@@ -3,7 +3,7 @@
   "collectionName": "business",
   "info": {
     "name": "business",
-    "description": ""
+    "description": "Business entities and their info."
   },
   "options": {
     "timestamps": true
@@ -14,17 +14,25 @@
       "required": true
     },
     "categories": {
-      "collection": "foodcategory",
+      "collection": "category",
+      "dominant": true,
       "via": "businesses",
-      "dominant": true
-    },
-    "address": {
-      "type": "string"
+      "columnName": ""
     },
     "banner": {
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "address": {
+      "type": "string"
+    },
+    "contactNumber": {
+      "type": "string"
+    },
+    "links": {
+      "collection": "link",
+      "via": "business"
     }
   }
 }

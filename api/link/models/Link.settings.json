@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "sociallink",
+  "info": {
+    "name": "link",
+    "description": "Social accounts"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "facebook",
+        "messenger",
+        "instagram",
+        "twitter",
+        "pinterest",
+        "website",
+        "email",
+        "other"
+      ]
+    },
+    "business": {
+      "model": "business",
+      "via": "links"
+    }
+  }
+}
