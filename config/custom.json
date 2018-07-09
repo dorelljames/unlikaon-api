@@ -1,3 +1,5 @@
 {
-  "myCustomConfiguration": "This configuration is accessible through strapi.config.myCustomConfiguration"
+	"myCustomConfiguration":
+		"This configuration is accessible through strapi.config.myCustomConfiguration",
+	"buildHookUrl": "${process.env.API_BUILD_URL || ''}"
 }
