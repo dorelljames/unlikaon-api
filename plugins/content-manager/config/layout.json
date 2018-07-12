@@ -1,49 +1,37 @@
 {
-  "business": {
+  "article": {
     "attributes": {
-      "name": {
+      "title": {
         "appearance": ""
       },
-      "description": {
+      "coucou": {
+        "appearance": ""
+      },
+      "content": {
         "appearance": "WYSIWYG"
       },
-      "address": {
-        "appearance": ""
-      },
-      "contactNumber": {
+      "code": {
         "appearance": ""
       }
     }
   },
-  "food": {
+  "tag": {
     "attributes": {
       "name": {
-        "appearance": ""
-      },
-      "description": {
-        "appearance": "WYSIWYG"
-      },
-      "price": {
         "appearance": ""
       }
     }
   },
-  "foodCategory": {
+  "category": {
     "attributes": {
       "name": {
         "appearance": ""
-      },
-      "description": {
-        "appearance": "WYSIWYG"
       }
     }
   },
-  "socialLink": {
+  "reference": {
     "attributes": {
-      "url": {
-        "appearance": ""
-      },
-      "type": {
+      "name": {
         "appearance": ""
       }
     }
