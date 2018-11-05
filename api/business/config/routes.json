@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/business",
+      "path": "/businesses",
       "handler": "Business.find",
       "config": {
         "policies": []
@@ -10,7 +10,7 @@
     },
     {
       "method": "GET",
-      "path": "/business/count",
+      "path": "/businesses/count",
       "handler": "Business.count",
       "config": {
         "policies": []
@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/business/:_id",
+      "path": "/businesses/:_id",
       "handler": "Business.findOne",
       "config": {
         "policies": []
@@ -26,7 +26,7 @@
     },
     {
       "method": "POST",
-      "path": "/business",
+      "path": "/businesses",
       "handler": "Business.create",
       "config": {
         "policies": []
@@ -34,7 +34,7 @@
     },
     {
       "method": "PUT",
-      "path": "/business/:_id",
+      "path": "/businesses/:_id",
       "handler": "Business.update",
       "config": {
         "policies": []
@@ -42,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/business/:_id",
+      "path": "/businesses/:_id",
       "handler": "Business.destroy",
       "config": {
         "policies": []
