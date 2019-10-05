@@ -39,7 +39,7 @@
   "devDependencies": {
     "sanitize.css": "^4.1.0",
     "strapi-helper-plugin": "3.0.0-alpha.14.4.0",
-    "strapi-utils": "3.0.0-alpha.14.4.0"
+    "strapi-utils": "3.0.0-next.24"
   },
   "engines": {
     "node": ">= 9.0.0",
