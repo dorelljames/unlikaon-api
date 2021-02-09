@@ -22,8 +22,8 @@
     "lodash": "4.x.x",
     "request": "^2.87.0",
     "strapi": "^3.0.0-alpha.14.4.0",
-    "strapi-hook-mongoose": "^3.0.0-alpha.14.4.0",
-    "strapi-upload-cloudinary": "^3.0.0-alpha.14.4.0"
+    "strapi-hook-mongoose": "3.0.0-next.31",
+    "strapi-upload-cloudinary": "3.0.0-alpha.14.5"
   },
   "author": {
     "name": "dorelljames",
