@@ -35,7 +35,7 @@
   "deprecated": false,
   "description": "This is the description of the plugin.",
   "devDependencies": {
-    "strapi-helper-plugin": "3.0.0-alpha.14.4.0"
+    "strapi-helper-plugin": "3.6.8"
   },
   "engines": {
     "node": ">= 7.0.0",
