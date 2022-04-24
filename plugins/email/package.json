@@ -37,7 +37,7 @@
   "deprecated": false,
   "description": "This is the description of the plugin.",
   "devDependencies": {
-    "react-copy-to-clipboard": "5.0.1",
+    "react-copy-to-clipboard": "5.1.0",
     "strapi-helper-plugin": "3.0.0-alpha.14.4.0"
   },
   "engines": {
