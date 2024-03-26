@@ -34,13 +34,13 @@
   "dependencies": {
     "immutable": "^3.8.2",
     "pluralize": "^7.0.0",
-    "strapi-generate": "3.0.0-alpha.14.4.0",
-    "strapi-generate-api": "3.0.0-alpha.14.4.0"
+    "strapi-generate": "3.6.11",
+    "strapi-generate-api": "3.6.11"
   },
   "deprecated": false,
   "description": "Strapi plugin to create content type (API).",
   "devDependencies": {
-    "strapi-helper-plugin": "3.0.0-alpha.14.4.0"
+    "strapi-helper-plugin": "3.6.11"
   },
   "engines": {
     "node": ">= 9.0.0",
