@@ -39,7 +39,7 @@
     "koa2-ratelimit": "^0.6.1",
     "purest": "^2.0.1",
     "request": "^2.83.0",
-    "uuid": "^3.1.0"
+    "uuid": "^11.1.1"
   },
   "deprecated": false,
   "description": "Protect your API with a full-authentication process based on JWT",
